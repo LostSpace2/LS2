@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Файловая система</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./script/script.js" defer></script>
+</head>
+<body>
+
+  <main>
+    <img src="./image/papka.png" alt="Видео" class="papka" id="openModal1" />
+    <div style="margin-left: 70px; margin-top: -15px;">Видео</div>
+
+    <img src="./image/papka.png" alt="Файлы" class="papka" id="openModal2" />
+    <div style="margin-left: 65px; margin-top: -15px;">Файлы</div>
+
+    <img src="./image/papka.png" alt="Секретно" class="papka" id="openModal3" />
+    <div style="margin-left: 57px; margin-top: -15px;">Секретно</div>
+  </main>
+
+  <!-- 🎬 Видео -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Папка: Видео
+        <span class="close" data-close="modal1">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="video-item">
+          <a href="https://disk.yandex.ru/d/F3opQ4ZsBPrB9Q" target="_blank">
+            ▶ А иобя лбл пулсьуэ рпсубм оп по тсёей гбт вёсёдйуётэ
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button>ОК</button>
+        <button class="close" data-close="modal1">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📺 Модальный видеоплеер -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <span class="video-close" onclick="closeVideoFrame()">&times;</span>
+      <iframe
+        id="videoFrame"
+        width="100%"
+        height="450"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- 🖼️ Файлы -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Папка: Файлы
+        <span class="close" data-close="modal2">&times;</span>
+      </div>
+      <div class="modal-body scroll-gallery">
+        <div class="vertical-gallery">
+          <img src="./image/1.png" alt="Фото 1" />
+          <img src="./image/2.png" alt="Фото 2" />
+          <img src="./image/3.png" alt="Фото 3" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button>ОК</button>
+        <button class="close" data-close="modal2">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔐 Секретно -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Папка: Секретно
+        <span class="close" data-close="modal3">&times;</span>
+      </div>
+      <div class="modal-body">
+        <label for="secret-password">Введите пароль:</label><br />
+        <input type="password" id="secret-password" /><br /><br />
+        <button onclick="checkPassword()">Открыть</button>
+        <p id="secret-message" style="display:none; margin-top:10px;">
+          🕵️‍♂️ Добро пожаловать в закрытую зону.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="close" data-close="modal3">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🪟 Футер -->
+  <footer>
+    <img src="./image/win.png" alt="win" class="win" />
+    <div id="footer-folder" class="footer-folder" style="display: none;">
+      <img src="./image/papka.png" alt="Активная папка" style="width: 55px; height: 50px;" />
+    </div>
+  </footer>
+
+</body>
+</html>
