@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function checkPassword() {
   const input = document.getElementById("secret-password").value;
   const message = document.getElementById("secret-message");
-  if (input === "1234") {
+  if (input === "[oidg[oibwe[oiwenfpoibnafm") {
     message.style.display = "block";
   } else {
     alert("Неверный пароль!");
@@ -99,3 +99,4 @@ function closeVideoPlayer() {
   video.pause();
   modal.style.display = "none";
 }
+
